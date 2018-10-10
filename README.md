@@ -4,4 +4,3 @@
 
 - [ ] collet all my dotfile
 - [ ] provide auto install shell script (ubuntu && centos)
-- [ ] 
