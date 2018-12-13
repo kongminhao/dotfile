@@ -163,8 +163,6 @@ set nu
 set ci
 set fencs=utf-8,gbk,gb2312,cp936
 
-set ts=4
-set softtabstop=4
 set guifont=Ubuntu\ mono:h14
 set autoread
 set nobackup
