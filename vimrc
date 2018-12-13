@@ -49,6 +49,14 @@ if has("syntax")
   syntax on
 endif
 
+" tab to 4 space
+filetype plugin indent on
+" show existing tab with 4 spaces width
+set tabstop=4
+" when indenting with '>', use 4 spaces width
+set shiftwidth=4
+" On pressing tab, insert 4 spaces
+set expandtab
 " If using a dark background within the editing area and syntax highlighting
 " turn on this option as well
 "set background=dark
@@ -157,7 +165,6 @@ set fencs=utf-8,gbk,gb2312,cp936
 
 set ts=4
 set softtabstop=4
-set shiftwidth=4
 set guifont=Ubuntu\ mono:h14
 set autoread
 set nobackup
