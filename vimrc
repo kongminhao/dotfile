@@ -258,5 +258,6 @@ let g:autoHEADER_fill_char_repeat=70
 set re=1
 set ttyfast
 set lazyredraw
+"vim easymotion conf"
 let mapleader=" "
 map f <leader><leader>s
