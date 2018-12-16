@@ -144,6 +144,7 @@ Plug 'plasticboy/vim-markdown'
 "Plug 'terryma/vim-multiple-cursors'
 
 Plug 'kongminhao/autoHEADER'
+Plug 'easymotion/vim-easymotion'
 
 Plug 'johngrib/vim-game-code-break'
 "vim golang"
@@ -257,3 +258,5 @@ let g:autoHEADER_fill_char_repeat=70
 set re=1
 set ttyfast
 set lazyredraw
+let mapleader=" "
+map f <leader><leader>s
