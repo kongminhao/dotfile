@@ -9,6 +9,7 @@
 " properly set to work with the Vim-related packages available in Debian.
 runtime! debian.vim
 """"""""""""""""""""
+let g:islinux=1
 " Uncomment the next line to make Vim more Vi-compatible
 " NOTE: debian.vim sets 'nocompatible'.  Setting 'compatible' changes numerous
 " options, so any other options should be set AFTER setting 'compatible'.
@@ -160,11 +161,7 @@ colo solarized
 let g:solarized_italic=0
 call togglebg#map("<F5>")
 
-if (g:isGUI)
-	set background=light
-else
-	set background=dark
-endif
+set background=dark
 
 """"""""""""""""""""""""""""""""
 "for syntastic
