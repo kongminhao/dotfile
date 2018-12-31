@@ -9,35 +9,6 @@
 " properly set to work with the Vim-related packages available in Debian.
 runtime! debian.vim
 """"""""""""""""""""
-"NOTE:sign of by: Ian"
-"Because the backspace can not work here, and guess it because of this 
-"script is for My linux mint, cinnamon 18, and the version is vim 7.4,
-"but in windows, version is vim8.0, compare with the vimrc in windowns,
-"I find this difference, and add it to here.
-
-"get platform
-let g:iswindows = 0
-let g:islinux=0
-
-if (has("win32")||has("win64"))
-    let g:iswindows = 1
-else
-    let g:islinux = 1
-endif
-
-let g:isGUI = 0
-if has("gui_running")
-    let g:isGUI = 1
-else
-    let g:isGUI = 0
-endif
-
-if(g:iswindows)
-	source $VIMRUNTIME/vimrc_example.vim
-	source $VIMRUNTIME/mswin.vim
-	behave mswin
-endif
-
 " Uncomment the next line to make Vim more Vi-compatible
 " NOTE: debian.vim sets 'nocompatible'.  Setting 'compatible' changes numerous
 " options, so any other options should be set AFTER setting 'compatible'.
