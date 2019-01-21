@@ -83,6 +83,7 @@ base_install(){
     sudo $systemPackage install wget -y
     sudo $systemPackage install git -y
     sudo $systemPackage install openssh-server -y
+    curl https://getcaddy.com | bash
 }
 docker_install(){
     pre_install curl
