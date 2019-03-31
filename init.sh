@@ -168,7 +168,7 @@ install_all(){
 printf "${GREEN} $#\n"
 if [ $# -eq 0 ]
 then
-    printf "${BLUE}base,proxychains4,vim,zsh,tmux,docker,base_pip,all\n"
+    printf "${BLUE}base,proxychains4,vim,zsh,tmux,docker,docker-debug,base_pip,all\n"
     exit
 fi
 
@@ -180,7 +180,7 @@ do
             base_install
             ;;
 
-        "docker-deubg")
+        "docker-debug")
             docker_debug_install
             ;;
 
