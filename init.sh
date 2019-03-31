@@ -96,6 +96,12 @@ docker_install(){
     sudo echo '{\n"registry-mirrors": ["https://docker.mirrors.ustc.edu.cn"]\n}' > /etc/docker/daemon.json
     printf "${BLUE} set docker mirror.."
 }
+docker_debug_install(){
+    pre_install curl
+    curl -Lo docker-debug https://github.com/zeromake/docker-debug/releases/download/v0.4.0/docker-debug-linux-amd64
+    chmod +x ./docker-debug
+    sudo mv docker-debug /usr/local/bin/
+}
 tmux_install(){
     if [[ $release -eq 'centos' ]]; then
         sudo $systemPackage install epel-release -y
@@ -154,6 +160,7 @@ install_all(){
     vim_install
     # pip_install # i think this will be a huge bug, so temp annotation
     proxychains4_install
+    docker_debug_install
     env zsh -l
 }
 # 添加颜色
@@ -171,6 +178,10 @@ do
     
         "base")
             base_install
+            ;;
+
+        "docker-deubg")
+            docker_debug_install
             ;;
 
         "vim")
@@ -199,6 +210,7 @@ do
         "base_pip")
             sudo pip3 install requests docker-compose ipython jupyter
             ;;
+
         "all")
             install_all
             ;;
