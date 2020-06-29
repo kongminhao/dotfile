@@ -81,8 +81,6 @@ call plug#begin('~/.vim/plugged')
 "Plug 'rstacruz/sparkup', {'rtp':'vim/'}
 "Plug 'ascenator/L9', {'rtp':'newL9'}
 
-Plug 'altercation/vim-colors-solarized'
-
 Plug 'ervandew/supertab'
 
 "Plug 'kien/rainbow_parentheses.vim'
@@ -156,11 +154,6 @@ autocmd bufenter * if(winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTa
 let g:rainbow_active = 1
 
 "for solarized"
-colo solarized
-
-let g:solarized_italic=0
-call togglebg#map("<F5>")
-
 set background=dark
 
 """"""""""""""""""""""""""""""""
